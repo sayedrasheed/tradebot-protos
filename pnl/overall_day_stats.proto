@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+message OverallDayStats {
+    uint64 timestamp_ns = 1;
+    uint32 num_closed_positions = 2;
+    float total_realized_pnl = 3;
+    float max_drawdown = 4;
+    float max_drawup = 5;
+    float win_rate = 6;
+    uint32 num_wins = 7;
+    uint32 num_losses = 8;
+    float avg_pnl = 9;
+    float avg_win = 10;
+    float avg_loss = 11;
+    repeated string strategy_ids = 12;
+    string date = 13;
+    string day = 14;
+    uint64 day_timestamp_ns = 15;
+    float last_realized_pnl = 16;
+    uint32 position_hour = 17;
+    uint32 position_minute = 18;
+}

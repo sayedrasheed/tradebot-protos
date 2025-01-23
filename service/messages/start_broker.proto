@@ -1,0 +1,17 @@
+syntax = "proto3";
+import "datafeed_stream.proto";
+
+message StartBroker {
+    uint64 timestamp_ns = 1;
+    string batch_id = 2;
+    string strategy_id = 3;
+
+    enum BrokerId {
+        PaperTrader = 0;
+        NinjaTrader = 1;
+    }
+
+    BrokerId broker_id = 4;
+    ExecutionMode exe_mode = 5;
+
+}

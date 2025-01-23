@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message Unrealized {
+    uint64 timestamp_ns = 1;
+    float unrealized = 2;
+    uint32 order_id = 3;
+}

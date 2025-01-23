@@ -1,0 +1,16 @@
+syntax = "proto3";
+import "network.proto";
+import "topic.proto";
+import "datafeed_stream.proto";
+
+message JoinDatafeed {
+    uint64 timestamp_ns = 1;
+    string service_id = 2;
+    string batch_id = 3;
+    uint32 datafeed_id = 4;
+    string strategy_id = 5;
+    DatafeedType df_type = 6;
+    ExecutionMode exe_mode = 7;
+    Network network = 8;
+    repeated Topic topics = 9;
+}

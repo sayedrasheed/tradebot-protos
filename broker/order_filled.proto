@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+message OrderFilled {
+    uint64 timestamp_ns = 1;
+
+    string symbol = 2;
+    string strategy_id = 3;
+    uint32 order_id = 4;
+    
+    enum OrderType {
+        MARKET_ORDER = 0;
+        LIMIT_ORDER = 1;
+        STOP_ORDER = 2;
+    }
+
+    OrderType order_type = 5;
+    float price = 6;
+    int32 size = 7;
+}

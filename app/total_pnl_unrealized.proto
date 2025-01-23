@@ -1,0 +1,8 @@
+syntax = "proto3";
+import "pnl_value.proto";
+
+message TotalPnlUnrealized {
+    uint64 timestamp_ns = 1;
+    PnlValue value = 2;
+    uint32 position_id = 3;
+}

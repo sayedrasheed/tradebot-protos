@@ -1,0 +1,7 @@
+syntax = "proto3";
+import "pnl_value.proto";
+
+message TotalPnl {
+    uint64 timestamp_ns = 1;
+    repeated PnlValue points = 2;
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message StopStrategy {
+    uint64 timestamp_ns = 1;
+    string strategy_id = 2;
+}

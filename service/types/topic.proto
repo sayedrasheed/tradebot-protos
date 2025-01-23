@@ -1,0 +1,7 @@
+syntax = "proto3";
+import "message_type.proto";
+
+message Topic {
+    enums.MessageType mtype = 1;
+    string topic = 2;
+}

@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message Realized {
+    uint64 timestamp_ns = 1;
+    float realized = 2;
+    uint32 order_id = 3;
+}

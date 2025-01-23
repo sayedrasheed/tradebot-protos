@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+enum DatafeedProvider {
+    Databento = 0;
+    NinjaTrader = 1;
+    Parquet = 2;
+    S3 = 3;
+}
+
+enum DatafeedType {
+    Futures = 0;
+    Equities = 1;
+    Options = 2;
+}
+
+
+enum ExecutionMode {
+    Live = 0;
+    Resim = 1;
+    Backtest = 2;
+}
+
+message DatafeedStream {
+    uint64 timestamp_ns = 1;
+    string symbol = 2;
+
+    message HistoricalDataConfig {
+        uint32 num_days = 1;
+    }
+
+    message CandleStream {
+        uint32 period_s = 1;
+        optional HistoricalDataConfig historical_data = 2;
+    }
+
+    repeated CandleStream candle_streams = 3;
+    DatafeedProvider provider = 4;
+
+    bool enable_ticks = 5;
+}

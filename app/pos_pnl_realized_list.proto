@@ -1,0 +1,7 @@
+syntax = "proto3";
+import "pos_pnl_realized.proto";
+
+message PositionPnlRealizedList {
+    uint64 timestamp_ns = 1;
+    repeated PositionPnlRealized realized_list = 2;
+}

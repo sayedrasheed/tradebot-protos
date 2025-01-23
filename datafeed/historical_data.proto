@@ -1,0 +1,11 @@
+syntax = "proto3";
+import "ohlcv.proto";
+
+message HistoricalData {
+    uint64 timestamp_ns = 1;
+    uint32 period_s = 2;
+    string symbol = 3;
+    
+    repeated Ohlcv ohlcv = 4;
+
+}

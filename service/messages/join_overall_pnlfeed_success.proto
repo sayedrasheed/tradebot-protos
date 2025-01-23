@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message JoinOverallPnlfeedSuccess {
+    uint64 timestamp_ns = 1;
+    string service_id = 2;
+    string batch_id = 3;
+}

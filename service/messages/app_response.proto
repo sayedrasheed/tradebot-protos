@@ -1,0 +1,14 @@
+syntax = "proto3";
+import "batch.proto";
+import "network.proto";
+import "topic.proto";
+
+message AppResponse {
+    uint64 timestamp_ns = 1;
+    string user_id = 2;
+    repeated Batch batches = 3;
+    Network network = 4;
+    repeated Topic topics = 5;
+
+
+}

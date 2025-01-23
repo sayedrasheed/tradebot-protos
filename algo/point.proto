@@ -1,0 +1,10 @@
+syntax = "proto3";
+import "value.proto";
+
+message Point {
+    string description = 1;
+    string symbol = 2;
+    uint32 period_s = 3;
+    uint32 pane_idx = 4;
+    Value value = 5;
+}

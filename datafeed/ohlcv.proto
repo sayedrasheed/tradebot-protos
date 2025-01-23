@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message Ohlcv {
+    uint64 timestamp_ns = 1;
+    float open = 2;
+    float close = 3;
+    float low = 4;
+    float high = 5;
+    uint64 volume = 6;
+
+}

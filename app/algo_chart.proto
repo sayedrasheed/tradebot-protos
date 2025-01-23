@@ -1,0 +1,12 @@
+syntax = "proto3";
+import "line.proto";
+import "rectangle.proto";
+import "advice.proto";
+
+message AlgoChart {
+    string symbol = 1;
+    uint32 period_s = 2;
+    map<string, Line> lines = 3;
+    repeated Rectangle rectangles = 4;
+    repeated Advice advices = 5;
+}

@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+message Order {
+    uint64 timestamp_ns = 1;
+    uint32 timeperiod_s = 2;
+
+    string symbol = 3;
+    string strategy_id = 4;
+    
+    enum OrderType {
+        MARKET_ORDER = 0;
+        LIMIT_ORDER = 1;
+        STOP_ORDER = 2;
+    }
+
+    enum OrderStatus {
+        OPEN = 0;
+        FILLED = 1;
+        CANCELLED = 2;
+    }
+
+    OrderType order_type = 5;
+    OrderStatus order_status = 6;
+    float price = 7;
+    float filled_price = 8;
+    int32 size = 9;
+    uint32 order_id = 10;
+    repeated string account_ids = 11;
+    string batch_id = 12;
+
+}

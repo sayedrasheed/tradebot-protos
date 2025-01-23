@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message Network {
+    string ip = 1;
+    uint32 port = 2;
+}

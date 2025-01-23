@@ -1,0 +1,7 @@
+syntax = "proto3";
+import "overall_day_stats.proto";
+
+message PnlHour {
+    uint64 timestamp_ns = 1;
+    map<uint32, OverallDayStats> stats = 2;
+}

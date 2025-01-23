@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message StrategyList {
+    message SymbolPeriods {
+        repeated uint32 period_s = 1;
+        string symbol = 2;
+    }
+    uint64 timestamp_ns = 1;
+    repeated string strategys = 2;
+    repeated SymbolPeriods symbol_periods = 3;
+
+}

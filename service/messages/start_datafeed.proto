@@ -1,0 +1,14 @@
+syntax = "proto3";
+import "datafeed_stream.proto";
+
+message StartDatafeed {
+    uint64 timestamp_ns = 1;
+    string batch_id = 2;
+    string strategy_id = 3;
+
+    DatafeedType df_type = 4;
+    ExecutionMode exe_mode = 5;
+    repeated DatafeedStream datafeed = 6;
+    
+    optional string start_date = 7;
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message SymbolPeriods {
+    repeated uint32 period_s = 1;
+    string symbol = 2;
+}

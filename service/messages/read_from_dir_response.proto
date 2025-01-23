@@ -1,0 +1,8 @@
+syntax = "proto3";
+import "batch.proto";
+
+message ReadFromDirResponse {
+    uint64 timestamp_ns = 1;
+    string log_dir = 2;
+    repeated Batch batches = 3;
+}

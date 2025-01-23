@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+message Tick {
+    uint64 timestamp_ns = 1;
+    string symbol = 2;
+    float price = 3;
+    uint32 size = 4;
+
+    enum Side {
+        ASK = 0;
+        BID = 1;
+        NONE = 2;
+    }
+
+    Side side = 5;
+}

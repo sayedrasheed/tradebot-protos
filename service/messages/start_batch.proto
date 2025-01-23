@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+message StartBatch {
+    uint64 timestamp_ns = 1;
+    string batch_id = 2;
+    repeated string strategy_ids = 3;
+    
+
+}

@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+message JoinAlgofeedSuccess {
+    uint64 timestamp_ns = 1;
+    string service_id = 2;
+    string batch_id = 3;
+    string strategy_id = 4;
+}

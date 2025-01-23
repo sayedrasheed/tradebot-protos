@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+message OrderFilledQuery {
+    uint64 timestamp_ns = 1;
+
+    string symbol = 2;
+    string strategy_id = 3;
+    uint32 order_id = 4;
+}

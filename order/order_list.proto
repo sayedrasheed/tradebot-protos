@@ -1,0 +1,7 @@
+syntax = "proto3";
+import "order.proto";
+
+message OrderList {
+    uint64 timestamp_ns = 1;
+    repeated Order orders = 2;
+}

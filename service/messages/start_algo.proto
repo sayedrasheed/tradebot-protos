@@ -1,0 +1,21 @@
+syntax = "proto3";
+import "datafeed_stream.proto";
+
+message StartAlgo {
+    uint64 timestamp_ns = 1;
+    string batch_id = 2;
+    string strategy_id = 3;
+
+    enum AlgoId {
+        RustAlgo = 0;
+        CppAlgo = 1;
+        PyAlgo = 2;
+    }
+
+    AlgoId algo_id = 4;
+
+    float starting_balance = 5;
+    ExecutionMode exe_mode = 6;
+    repeated string account_ids = 7;
+
+}

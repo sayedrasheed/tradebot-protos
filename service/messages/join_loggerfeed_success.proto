@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message JoinLoggerSuccess {
+    uint64 timestamp_ns = 1;
+    string service_id = 2;
+    string log_dir_path = 3;
+}

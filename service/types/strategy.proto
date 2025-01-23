@@ -1,0 +1,7 @@
+syntax = "proto3";
+import "symbol_period.proto";
+
+message Strategy {
+    string strategy_id = 1;
+    repeated SymbolPeriods symbol_periods = 2;
+}

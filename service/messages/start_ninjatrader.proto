@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+message StartNinjaTrader {
+    uint64 timestamp_ns = 1;
+    string batch_id = 2;
+    string strategy_id = 3;
+    string symbol = 4;
+
+}

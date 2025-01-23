@@ -1,0 +1,15 @@
+syntax = "proto3";
+import "datafeed_stream.proto";
+import "network.proto";
+import "topic.proto";
+
+message JoinAlgofeed {
+    uint64 timestamp_ns = 1;
+    string service_id = 2;
+    string batch_id = 3;
+    string strategy_id = 4;
+    Network network = 5;
+    repeated Topic topics = 6; 
+    ExecutionMode exe_mode = 7;
+    
+}

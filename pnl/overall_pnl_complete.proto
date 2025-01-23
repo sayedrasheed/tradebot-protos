@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message OverallPnlComplete {
+    uint64 timestamp_ns = 1;
+    string batch_id = 2;
+}

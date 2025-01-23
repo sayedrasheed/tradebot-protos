@@ -1,0 +1,7 @@
+syntax = "proto3";
+import "overall_day_stats.proto";
+
+message OverallDayStatsList {
+    uint64 timestamp_ns = 1;
+    repeated OverallDayStats overall_day_stats_list = 2;
+}

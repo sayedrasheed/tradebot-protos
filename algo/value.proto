@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message Value {
+    uint64 timestamp_ns = 1;
+    float value = 2;
+}

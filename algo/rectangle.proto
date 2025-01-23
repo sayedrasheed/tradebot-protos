@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message Rectangle {
+    uint64 timestamp_ns = 1;
+    string symbol = 2;
+    uint32 period_s = 3;
+    float low_price = 4;
+    float high_price = 5;
+    uint64 early_timestamp_ns = 6;
+    uint64 late_timestamp_ns = 7;
+    optional string color = 8;
+}

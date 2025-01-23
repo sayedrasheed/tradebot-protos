@@ -1,0 +1,7 @@
+syntax = "proto3";
+import "overall_day_stats.proto";
+
+message PnlCalendar {
+    uint64 timestamp_ns = 1;
+    map<string, OverallDayStats> stats = 2;
+}

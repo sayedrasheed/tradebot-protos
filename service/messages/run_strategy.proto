@@ -1,0 +1,11 @@
+syntax = "proto3";
+import "start_algo.proto";
+import "start_broker.proto";
+import "start_datafeed.proto";
+
+message RunStrategy {
+    uint64 timestamp_ns = 1;
+    StartDatafeed start_datafeed = 2;
+    StartBroker start_broker = 3;
+    StartAlgo start_algo = 4;
+}

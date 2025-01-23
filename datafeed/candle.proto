@@ -1,0 +1,9 @@
+syntax = "proto3";
+import "ohlcv.proto";
+
+message Candle {
+    string symbol = 1;
+    uint32 period_s = 2;
+    Ohlcv ohlcv = 3;
+
+}
