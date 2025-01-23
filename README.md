@@ -1,2 +1,2 @@
-# tradebot-protos
+# TradeBot protos
 Protobuf files for TradeBot
