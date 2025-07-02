@@ -15,5 +15,6 @@ message Advice {
     OrderType order_type = 4;
     float price = 5;
     int32 size = 6;
+    uint32 id = 7;
 
 }
