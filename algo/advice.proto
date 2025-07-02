@@ -15,6 +15,14 @@ message Advice {
     OrderType order_type = 4;
     float price = 5;
     int32 size = 6;
-    uint32 id = 7;
+
+    enum AdviceType {
+        NEW = 0;
+        ADD = 1;
+        PARTIAL = 2;
+        CLOSE = 3;
+    }
+
+    AdviceType advice_type = 7;
 
 }
