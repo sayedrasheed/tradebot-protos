@@ -19,6 +19,13 @@ message Order {
         CANCELLED = 2;
     }
 
+    enum PositionUpdate {
+        NEW = 0;
+        ADD = 1;
+        PARTIAL = 2;
+        CLOSE = 3;
+    }
+
     OrderType order_type = 5;
     OrderStatus order_status = 6;
     float price = 7;
@@ -27,5 +34,6 @@ message Order {
     uint32 order_id = 10;
     repeated string account_ids = 11;
     string batch_id = 12;
+    PositionUpdate position_update = 13;
 
 }
